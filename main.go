@@ -11,12 +11,13 @@ func main() {
 	fmt.Println("###########################")
 
 	// Get the service that user wants to use it
-	fmt.Println("\nSelect the service you want: (ip)")
+	fmt.Println("\nSelect the service you want: (ip, coin)")
 	fmt.Scanln(&selectedService)
 
 	// Call selected function
 	switch selectedService {
 		case "ip": getUserIpFromApi()
+		case "coin": getPrice()
 		default: fmt.Println("The service you selected is wrong!")
 	}
 }
